@@ -1,0 +1,8 @@
+.ipynb_checkpoints
+venv
+.envrc
+tmp
+data_tmp
+NOTES.md
+
+dask/mydask.png
