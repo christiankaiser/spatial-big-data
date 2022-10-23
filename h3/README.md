@@ -142,3 +142,25 @@ Danach können wir die Hexagon-Polygone wieder hinzufügen und eine Karte erstel
 taxis_h3_9 = taxis_h3_9.h3.h3_to_geo_boundary()
 taxis_h3_9.plot(column = 'passenger_count', figsize = (10, 10))
 ```
+
+
+## Räumliche Glättung
+
+Das hexagonale Gitter hat Vorteile bei gewissen räumlichen Operationen. So kann zum Beispiel eine räumliche Glättung einfach umgesetzt werden. Es genügt, die Anzahl Nachbaren zu definieren, die für die Glättung miteinbezogen werden sollen:
+
+```python
+taxis_h3_9_s2 = taxis_h3_9.h3.k_ring_smoothing(2)
+taxis_h3_9_s2.head()
+```
+
+Eine kleine Karte der geglätteten Werte kann dann so erstellt werden:
+
+```python
+taxis_h3_9_s2.plot(
+    figsize = (10, 10),
+    column = 'passenger_count',
+    cmap = 'plasma',
+    edgecolor = 'none',
+    legend = True
+)
+```
