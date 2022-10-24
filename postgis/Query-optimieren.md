@@ -11,7 +11,16 @@ psql db0000 < lavaux.sql
 Dies kann auch durch ein Python-Skript geschehen, z.B. in einem Jupyter Notebook. Die `psycopg`-Bibliothek wird dafür zur Verbindung mit PostgreSQL verwendet.
 
 ```python
+import psycopg2 as psql
 
+db = psql.connect(dbname='dbXXXX')
+
+cursor = db.cursor()
+cursor.execute("""
+    SELECT ...
+""")
+
+result = cursor.fetchall()
 ```
 
 Nach dem Laden des SQL-Dumps haben wir zwei Tabellen in der Datenbank:
