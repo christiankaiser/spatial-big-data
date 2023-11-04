@@ -32,14 +32,14 @@ sudo apt install default-jre default-jdk
 Wir installieren Spark im Ordner `/opt/spark`. Der aktuelle Download-Link kann auf der Seite [https://spark.apache.org/downloads.html](https://spark.apache.org/downloads.html) gefunden werden.
 
 ```bash
-wget https://dlcdn.apache.org/spark/spark-3.3.0/spark-3.3.0-bin-hadoop3.tgz
+wget https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz
 ```
 
 Anschliessend müssen wir das Archiv extrahieren und anschliessend den Ordner nach `/opt/spark` verschieben:
 
 ```bash
-tar xvf spark-3.3.0-bin-hadoop3.tgz
-sudo mv spark-3.3.0-bin-hadoop3 /opt/spark
+tar xvf spark-3.5.0-bin-hadoop3.tgz
+sudo mv spark-3.5.0-bin-hadoop3 /opt/spark
 ```
 
 Wir sollten nun noch die Umgebungsvariable `SPARK_HOME` unserer Shell definieren.
