@@ -21,9 +21,9 @@ SELECT
     new_deceased,
     cumulative_confirmed,
     cumulative_deceased,
-    popultaion
+    population
 FROM `bigquery-public-data.covid19_open_data.covid19_open_data` c
-WHERE date > '2022-10-01'
+WHERE date > '2021-10-01'
 ```
 
 Anschliessend können wir die Anfrage oder die View abspeichern.
