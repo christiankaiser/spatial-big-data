@@ -90,7 +90,7 @@ Wir können nun auch die Wörter zählen, die Shakepeare geschrieben hat. Dabei 
 ```python
 from pyspark.sql.functions import size, split
 wordCount = txt.select(
-    size(split(txt.value, '\s+')).name('nwords')
+    size(split(txt.value, r'\s+')).name('nwords')
 )
 ```
 
@@ -139,7 +139,7 @@ Natürlich können wir die ganze Operation in einem Befehl zusammenfassen:
 
 ```python
 txt.select(
-    size(split(txt.value, '\s+')).name('nwords')
+    size(split(txt.value, r'\s+')).name('nwords')
 ).agg(
     sum(col('nwords'))
 ).collect()
@@ -161,7 +161,7 @@ extract = spark.sql("""
 """)
 ```
 
-Natürlich haben wir da wird ein faules DataFrame bekommen, das wir aber durch
+Natürlich haben wir da ein faules DataFrame bekommen, das wir aber durch
 
 ```python
 extract.show()

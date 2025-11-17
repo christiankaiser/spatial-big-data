@@ -122,6 +122,9 @@ taxis_h3.plot(column = 'passenger_count', figsize = (10, 10))
 
 Wir können auch die Hierarchiestufe nachträglich noch ändern, mit `h3_to_parent`:
 
+```python
+taxis_h3_9 = taxis_h3.h3.h3_to_parent(9)
+```
 
 Wir müssen den Index auf die Hierarchiestufe 9 ändern und gleichzeitig die Summe der Passagierzahlen neu berechnen:
 
